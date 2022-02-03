@@ -12,35 +12,23 @@ const bookmarks = [
     title: "Media",
     links: [
       { name: "Youtube", url: "https://youtube.com" },
-      { name: "Netflix", url: "https://netflix.com" },
-      { name: "Crunchyroll", url: "https://crunchyroll.com" },
-      {
-        name: "Amazon Prime",
-        url: "https://www.amazon.com/Amazon-Video",
-      },
+      { name: "Amazon Prime", url: "https://www.amazon.com/Amazon-Video", },
     ],
   },
   {
-    title: "Reddit",
+    title: "University",
     links: [
-      { name: "/r/overwatch", url: "https://reddit.com/r/overwatch" },
-      {
-        name: "/r/pcmasterrace",
-        url: "https://reddit.com/r/pcmasterrace",
-      },
-      { name: "/r/me_irl", url: "https://reddit.com/r/me_irl" },
-      {
-        name: "/r/battlestations",
-        url: "https://reddit.com/r/battlestations",
-      },
-      { name: "/r/unixporn", url: "https://reddit.com/r/unixporn" },
-      { name: "/r/news", url: "https://reddit.com/r/news" },
+      { name: "Mail", url: "https://securemail.unimi.it/iwc_static/layout/main.html?lang=it-IT&3.0.2.3.0_20070456" },
+      { name: "UNIMIA", url: "http://unimia.unimi.it/portal/server.pt/community/unimia/207" },
+      
     ],
   },
   {
     title: "Social",
     links: [
-      { name: "Twitter", url: "https://twitter.com" },
+      { name: "Whatsapp", url: "https://web.whatsapp.com/" },
+      { name: "Telegram", url: "https://web.telegram.org/k/" },
+      { name: "Instagram", url: "https://www.instagram.com/" },
       { name: "Facebook", url: "https://facebook.com" },
     ],
   },
