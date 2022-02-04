@@ -5,9 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
 
-    <title>Homepage</title>
+    <title>Home</title>
     <link rel="stylesheet" href="styles.css" />
-    <link href="favicon.png" rel="shortcut icon" type="image/x-icon" />
+    <link href="favicon.ico" rel="shortcut icon" type="image/x-icon" />
   </head>
   <body>
 
@@ -61,8 +61,8 @@
       function getWeather() {
         let xhr = new XMLHttpRequest();
         // Request to open weather map
-        const lat = "45.1759";
-        const lon = "-10";
+        const lat = "45.10374";
+        const lon = "9.39284";
         //metric/imperial
         const unit = "metric";
         const url = "https://api.openweathermap.org/data/2.5/weather?units=".concat(unit, "&lat=", lat, "&lon=",lon,"&appid=e5b292ae2f9dae5f29e11499c2d82ece");

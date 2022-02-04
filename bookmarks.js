@@ -3,24 +3,26 @@ const bookmarks = [
   {
     title: "Daily",
     links: [
-      { name: "Inbox", url: "https://inbox.google.com" },
+      { name: "Gmail", url: "https://inbox.google.com" },
       { name: "GitHub", url: "https://github.com" },
       { name: "Drive", url: "https://drive.google.com" },
+      { name: "Calendar", url: "https://calendar.google.com/calendar/u/0/r/week?tab=rc" },
     ],
   },
   {
     title: "Media",
     links: [
       { name: "Youtube", url: "https://youtube.com" },
-      { name: "Amazon Prime", url: "https://www.amazon.com/Amazon-Video", },
+      { name: "Amazon Prime", url: "https://www.primevideo.com/", },
+      { name: "Bleach", url: "https://www.animeunity.tv/anime/69-bleach", },
     ],
   },
   {
     title: "University",
     links: [
-      { name: "Mail", url: "https://securemail.unimi.it/iwc_static/layout/main.html?lang=it-IT&3.0.2.3.0_20070456" },
+      { name: "Mail", url: "https://cas.unimi.it/login?service=https://securemail.unimi.it/webmail/" },
       { name: "UNIMIA", url: "http://unimia.unimi.it/portal/server.pt/community/unimia/207" },
-      
+
     ],
   },
   {
