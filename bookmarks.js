@@ -14,7 +14,7 @@ const bookmarks = [
     links: [
       { name: "Youtube", url: "https://youtube.com" },
       { name: "Amazon Prime", url: "https://www.primevideo.com/", },
-      { name: "Bleach", url: "https://www.animeunity.tv/anime/69-bleach", },
+      { name: "Animeunity", url: "https://www.animeunity.tv", },
       { name: "Spotify", url: "https://open.spotify.com/", },
     ],
   },
