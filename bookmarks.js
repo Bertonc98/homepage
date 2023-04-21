@@ -37,4 +37,9 @@ const bookmarks = [
       { name: "Facebook", url: "https://facebook.com" },
     ],
   },
+  {
+    title: "Work",
+    links: [
+    ],
+  },
 ];
