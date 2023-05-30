@@ -8,6 +8,7 @@ const bookmarks = [
       { name: "Drive", url: "https://drive.google.com" },
       { name: "Calendar", url: "https://calendar.google.com/calendar/u/0/r/week?tab=rc" },
       { name: "Meet", url: "https://meet.google.com/" },
+      { name: "Google Photos", url: "https://photos.google.com/" },
     ],
   },
   {
