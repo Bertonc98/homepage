@@ -20,15 +20,6 @@ const bookmarks = [
     ],
   },
   {
-    title: "University",
-    links: [
-      { name: "Mail", url: "https://cas.unimi.it/login?service=https://securemail.unimi.it/webmail/" },
-      { name: "UNIMIA", url: "http://unimia.unimi.it/portal/server.pt/community/unimia/207" },
-      { name: "Teams", url: "https://teams.microsoft.com/_?culture=en-us&country=ww#/school/conversations/Tesi%20MPHero?threadId=19:d1bd424605444e8e94e414e2f0447f05@thread.tacv2&ctx=channel" },
-      { name: "Overleaf", url: "https://www.overleaf.com/project" },
-    ],
-  },
-  {
     title: "Social",
     links: [
       { name: "Whatsapp", url: "https://web.whatsapp.com/" },
@@ -40,6 +31,7 @@ const bookmarks = [
   {
     title: "Work",
     links: [
+       { name: "Timesheet", url: "https://latitudointernalapps.azurewebsites.net/Timesheet/timesheet.aspx" },
     ],
   },
 ];
