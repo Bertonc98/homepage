@@ -17,7 +17,7 @@ const bookmarks = [
     links: [
       { name: "Youtube", url: "https://youtube.com" },
       { name: "Amazon Prime", url: "https://www.primevideo.com/", },
-      { name: "Animeunity", url: "https://www.animeunity.tv", },
+      { name: "Animeunity", url: "https://www.animeunity.to/", },
       { name: "Spotify", url: "https://open.spotify.com/", },
     ],
   },
