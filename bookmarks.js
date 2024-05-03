@@ -16,6 +16,7 @@ const bookmarks = [
       { name: "Amazon Prime", url: "https://www.primevideo.com/", },
       { name: "Animeunity", url: "https://www.animeunity.tv", },
       { name: "Spotify", url: "https://open.spotify.com/", },
+      { name: "Netflix", url: "https://www.netflix.com/browse", },
     ],
   },
   {
