@@ -10,6 +10,7 @@ const bookmarks = [
       { name: "Meet", url: "https://meet.google.com/" },
       { name: "Google Photos", url: "https://photos.google.com/" },
       { name: "Notion", url: "https://www.notion.so/Quick-Notes-d850817ef0ee4e569ce6389d7b58b772"},
+      { name: "Keep", url: "https://keep.google.com/"},
     ],
   },
   {
