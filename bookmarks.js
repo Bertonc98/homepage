@@ -33,9 +33,10 @@ const bookmarks = [
     ],
   },
   {
-    title: "Work",
+    title: "University",
     links: [
-       { name: "Timesheet", url: "https://latitudointernalapps.azurewebsites.net/Timesheet/timesheet.aspx" },
+       { name: "Teams", url: "https://teams.microsoft.com/v2/" },
+       { name: "Mail", url: "https://outlook.office.com/mail/" },
     ],
   },
 ];
