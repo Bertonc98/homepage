@@ -28,6 +28,7 @@ const bookmarks = [
     links: [
       { name: "Whatsapp", url: "https://web.whatsapp.com/" },
       { name: "Telegram", url: "https://web.telegram.org/k/" },
+      { name: "Facebook", url: "https://reddit.com" },
       { name: "Instagram", url: "https://www.instagram.com/" },
       { name: "Facebook", url: "https://facebook.com" },
     ],
