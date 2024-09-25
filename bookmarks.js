@@ -40,6 +40,8 @@ const bookmarks = [
        { name: "Mail", url: "https://outlook.office.com/mail/" },
        { name: "Unimibox", url: "https://unimibox.unimi.it/index.php/apps/files"},
        { name: "OverLeaf", url: "https://www.overleaf.com/project"},
+       { name: "EasyBadge", url: "https://orari-be.divsi.unimi.it/easybadge-new/attivita-giorno"},
+       { name: "Ariel", url: "https://myariel.unimi.it/course/view.php?id=5245"},
     ],
   },
 ];
