@@ -21,6 +21,7 @@ const bookmarks = [
       { name: "Animeunity", url: "https://www.animeunity.to/", },
       { name: "Spotify", url: "https://open.spotify.com/", },
       { name: "Netflix", url: "https://www.netflix.com/browse", },
+      { name: "AdventOfCode", url : "https://adventofcode.com/"},
     ],
   },
   {
