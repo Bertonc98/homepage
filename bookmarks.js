@@ -7,6 +7,7 @@ const bookmarks = [
       { name: "GitHub", url: "https://github.com" },
       { name: "Drive", url: "https://drive.google.com" },
       { name: "Calendar", url: "https://calendar.google.com/calendar/u/0/r/week?tab=rc" },
+      { name: "Tasks", url: "https://tasks.google.com/tasks/"},
       { name: "Meet", url: "https://meet.google.com/" },
       { name: "Google Photos", url: "https://photos.google.com/" },
       { name: "Synchthing", url: "http://127.0.0.1:8384/"},
