@@ -47,12 +47,7 @@
 
     <!-- JavaScript to load Navbar -->
     <script>
-        fetch('./pages/navbar.html')
-            .then(response => response.text())
-            .then(data => {
-                document.getElementById('navbar').innerHTML = data;
-                markActivePage();
-            });
+
 
         function markActivePage() {
           const path = window.location.pathname;
@@ -72,6 +67,8 @@
               }
           });
       }
+	// Run after DOM loads
+	document.addEventListener('DOMContentLoaded', markActivePage);
     </script>
   </body>
 </html>
