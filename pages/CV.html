@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Alberto Bertoncini | Curriculum">
+    <title>Alberto Bertoncini</title>
+    <link rel="icon" href="/img/bassotto.ico" type="image/x-icon">
+    <!-- PNG fallback -->
+    <link rel="icon" href="/img/bassotto.png" type="image/png">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.blue.min.css">
+</head>
+<body>
+    <div id="navbar-content"></div>
+
+    <!-- Main Section -->
+    <main class="container">
+        <article class="profile-card">
+  <header style="display:flex;align-items:center;gap:1.5rem;flex-wrap:wrap;margin-bottom:1rem;">
+    <img src="/img/profile_picture.jpg" alt="Alberto Bertoncini" style="width:80px;height:80px;object-fit:cover;border-radius:var(--radius);">
+    <div>
+      <h1>Alberto Bertoncini</h1>
+      <p><strong>Research Fellow</strong> · University of Milan · CONNETS & OptLab</p>
+      <p>Optimization, Cloud-to-Edge Systems, Data Science</p>
+	  <p><a href="/src/Bertoncini_Alberto_Curriculum_Dottorato__Eng_.pdf" target="blank">English version</a> | <a href="/src/Bertoncini_Alberto_Curriculum_Dottorato.pdf" target="blank">Italian Version</a></p>
+    </div>
+  </header>
+</article>
+
+<article>
+  <h2>🎓 Education</h2>
+  <ul>
+    <li><strong>M.Sc. Computer Science</strong> — University of Milan<br>
+      <em>Enhancing sparse regression models with cutting planes</em><br>
+      <span style="font-size:1.1em;color:var(--primary);">110/110 cum laude</span>
+    </li>
+    <li><strong>B.Sc. Computer Science</strong> — University of Milan<br>
+      <em>Interlibrary VRP optimization using combinatorial techniques</em>
+    </li>
+  </ul>
+</article>
+
+<article>
+  <h2>🔬 Research Interests</h2>
+  <ul>
+    <li><span style="color:var(--primary);">Microservice placement</span> and orchestration</li>
+    <li><span style="color:var(--primary);">Combinatorial</span> and mathematical optimization</li>
+    <li><span style="color:var(--primary);">Cloud-to-edge</span> systems</li>
+    <li>Simulation of distributed computing environments</li>
+  </ul>
+</article>
+
+<article>
+  <h2>🏛️ Academic Positions</h2>
+  <p><strong>Research Fellow</strong> — University of Milan<br>
+  <em>PRIN 2022 – CAVIA: Cloud-to-Autonomous-Vehicles continuum optimization</em></p>
+</article>
+
+<article>
+  <h2>👨‍🏫 Teaching</h2>
+  <ul>
+    <li><strong>Lecturer:</strong> <em>Informatica e Biostatistica</em> (M.Sc. Veterinary Medicine)</li>
+    <li><strong>Module Lead:</strong> <em>Scienze propedeutiche alla medicina veterinaria</em></li>
+    <li><strong>Exam Committee President:</strong> Informatica, Chimica, Fisica</li>
+  </ul>
+</article>
+
+<article>
+  <h2>📢 Conferences 2025</h2>
+  <ul>
+    <li><strong>IEEE SmartComp</strong><br><small>Latency-Aware Placement of Microservices</small></li>
+    <li><strong>ISC DSA</strong><br><small>Centrality-Based Microservice Orchestration</small></li>
+  </ul>
+</article>
+
+<article>
+  <h2>🤝 Service & Committees</h2>
+  <ul>
+    <li>Organizing & Scientific Committee — <strong>ODS 2025</strong></li>
+    <li>Peer Reviewer — <strong>Springer Nature</strong> (Cloud/Edge/Optimization)</li>
+    <li>TPC Reviewer — <strong>ODS 2025</strong></li>
+    <li>Staff — <strong>AIweek 2025</strong>, Milan</li>
+  </ul>
+</article>
+
+<article>
+  <h2>💻 Skills</h2>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1rem;">
+    <div><strong>Languages:</strong> Python, R, C++, LaTeX</div>
+    <div><strong>Tools:</strong> Gurobi, PyTorch, Azure, PySpark</div>
+    <div><strong>Techniques:</strong> MIP, ML deployment, Simulation</div>
+  </div>
+</article>
+
+    </main>
+
+    <footer class="container">
+        <small>© 2025 Alberto Bertoncini</small>
+    </footer>
+
+    <!-- JavaScript to load Navbar -->
+    <script>
+		function markActivePage() {
+				  const path = window.location.pathname;
+				  const currentPage = path.substring(path.lastIndexOf('/') + 1);
+				  console.log('PAGE:', currentPage);
+				  const links = document.querySelectorAll('#navbar a');
+
+				  links.forEach(link => {
+					const idPage = link.getAttribute('id');
+					console.log('ID:', idPage);
+					
+					if (currentPage.includes(idPage.replace('.html', ''))) {  // Strip .html for match
+					  link.classList.remove('secondary');
+					  link.classList.add('primary');
+					} else {
+					  link.classList.remove('primary');
+					  link.classList.add('secondary');
+					}
+				  });
+			  }
+		// Load navbar
+		fetch('/includes/navbar.html')
+		  .then(response => response.text())
+		  .then(html => {
+			document.getElementById('navbar-content').innerHTML = html;
+			markActivePage();  // Run after insert
+		  })
+		  .catch(err => console.error('Navbar load failed:', err));
+
+
+        
+
+    </script>
+  </body>
+</html>
+
+
+

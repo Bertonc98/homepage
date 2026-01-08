@@ -3,16 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Homepage of Alberto Bertoncini, Researcher at UNIMI">
+    <meta name="description" content="Alberto Bertoncini">
     <title>Alberto Bertoncini</title>
     <link rel="icon" href="img/bassotto.ico" type="image/x-icon">
     <!-- PNG fallback -->
-    <link rel="icon" href="img/bassotto.png" type="image/png">
+    <link rel="icon" href="/img/bassotto.png" type="image/png">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.blue.min.css">
 </head>
 <body>
-    {% include navbar.html %}
+    <div id="navbar-content"></div>
 
     <!-- Main Section -->
     <main class="container" id="about">
@@ -47,26 +47,37 @@
 
     <!-- JavaScript to load Navbar -->
     <script>
+		function markActivePage() {
+				  const path = window.location.pathname;
+				  const currentPage = path.substring(path.lastIndexOf('/') + 1);
+				  console.log('PAGE:', currentPage);
+				  const links = document.querySelectorAll('#navbar a');
+
+				  links.forEach(link => {
+					const idPage = link.getAttribute('id');
+					console.log('ID:', idPage);
+					
+					if (currentPage.includes(idPage.replace('.html', ''))) {  // Strip .html for match
+					  link.classList.remove('secondary');
+					  link.classList.add('primary');
+					} else {
+					  link.classList.remove('primary');
+					  link.classList.add('secondary');
+					}
+				  });
+			  }
+		// Load navbar
+		fetch('includes/navbar.html')
+		  .then(response => response.text())
+		  .then(html => {
+			document.getElementById('navbar-content').innerHTML = html;
+			markActivePage();  // Run after insert
+		  })
+		  .catch(err => console.error('Navbar load failed:', err));
 
 
-        function markActivePage() {
-          const path = window.location.pathname;
-          const currentPage = path.substring(path.lastIndexOf('/') + 1);
-		  console.log(currentPage);
-          const links = document.querySelectorAll('#navbar a');
+        
 
-          links.forEach(link => {
-              const idPage = link.getAttribute('id');
-              console.log(idPage);
-              if (currentPage.includes(idPage)) {
-                  // If root path is accessed directly (like /bertoncini/), mark 'index.html' as active
-				  link.classList.remove('secondary');
-                  link.classList.add('primary');
-              } 
-          });
-      }
-	// Run after DOM loads
-	document.addEventListener('DOMContentLoaded', markActivePage);
     </script>
   </body>
 </html>

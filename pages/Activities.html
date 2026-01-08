@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Alberto Bertoncini | Activities">
+    <title>Alberto Bertoncini</title>
+    <link rel="icon" href="/img/bassotto.ico" type="image/x-icon">
+    <!-- PNG fallback -->
+    <link rel="icon" href="/img/bassotto.png" type="image/png">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.blue.min.css">
+</head>
+<body>
+    <div id="navbar-content"></div>
+
+    <!-- Main Section -->
+    <main class="container" id="about">
+        <article>
+  <h2>Research</h2>
+  <ul>
+    <li><strong>PhD Candidate</strong> at the University of Milan on the project <em>Service orchestration in dynamic multi-layer heterogeneous mobile networks</em>, at CONNETS and OptLab</li>
+    <li><strong>Research fellow</strong> at the University of Milan in the PRIN 2022 project <em>CAVIA: enabling the Cloud-to-Autonomous-Vehicles continuum for future Industrial Applications</em>, at CONNETS and OptLab</li>
+    <li><strong>Focus on:</strong>
+      <ul>
+        <li>Optimization of computing and network resources in autonomous vehicle systems</li>
+        <li>Microservice placement modeling in cloud-to-edge environments</li>
+        <li>Mathematical programming and heuristic algorithms for combinatorial problems</li>
+        <li>Performance evaluation through simulation environments</li>
+      </ul>
+    </li>
+  </ul>
+</article>
+
+<article>
+  <h2>Teaching</h2>
+  <ul>
+    <li>Lecturer for the course <em>Reti di Calcolatori</em> in the M.Sc. in Computer Science</li>
+    <li>Lecturer for the course <em>Informatica e Biostatistica</em> in the M.Sc. in Veterinary Medicine</li>
+    <li>Module lead for <em>Scienze propedeutiche alla medicina veterinaria</em></li>
+    <li>President of the exam committee for:
+      <ul>
+        <li><em>Informatica e Biostatistica</em></li>
+        <li><em>Chimica</em></li>
+        <li><em>Fisica</em></li>
+      </ul>
+    </li>
+  </ul>
+</article>
+
+<article>
+  <h2>Conference Presentations</h2>
+  <ul>
+    <li><strong>IEEE SmartComp</strong><br><em>Latency-Aware Placement of Microservices in the Cloud-to-Edge Continuum via Resource Scaling</em></li>
+    <li><strong>ISC DSA (Decision Science Alliance)</strong><br><em>A Centrality-Based Resource-Aware Microservice Orchestration in Cloud-to-Edge Continuum</em></li>
+  </ul>
+</article>
+
+<article>
+  <h2>Organization & Scientific Committees</h2>
+  <ul>
+    <li>Organizing and Scientific Committee Member: <em>International Conference on Optimization and Decision Science (ODS)</em></li>
+    <li>TPC Reviewer – Abstract and Short Paper Review: <em>ODS, Operations Research Society</em></li>
+    <li>Staff Member: <em>AIweek – European AI event</em></li>
+  </ul>
+</article>
+
+<article>
+  <h2>Reviewing</h2>
+  <ul>
+    <li>Peer reviewer for <strong>Springer Nature</strong> journals<br>
+    Topics: cloud and edge computing, optimization, microservice orchestration</li>
+  </ul>
+</article>
+
+    </main>
+
+    <footer class="container">
+        <small>© 2025 Alberto Bertoncini</small>
+    </footer>
+
+    <!-- JavaScript to load Navbar -->
+    <script>
+		function markActivePage() {
+				  const path = window.location.pathname;
+				  const currentPage = path.substring(path.lastIndexOf('/') + 1);
+				  console.log('PAGE:', currentPage);
+				  const links = document.querySelectorAll('#navbar a');
+
+				  links.forEach(link => {
+					const idPage = link.getAttribute('id');
+					console.log('ID:', idPage);
+					
+					if (currentPage.includes(idPage.replace('.html', ''))) {  // Strip .html for match
+					  link.classList.remove('secondary');
+					  link.classList.add('primary');
+					} else {
+					  link.classList.remove('primary');
+					  link.classList.add('secondary');
+					}
+				  });
+			  }
+		// Load navbar
+		fetch('/includes/navbar.html')
+		  .then(response => response.text())
+		  .then(html => {
+			document.getElementById('navbar-content').innerHTML = html;
+			markActivePage();  // Run after insert
+		  })
+		  .catch(err => console.error('Navbar load failed:', err));
+
+
+        
+
+    </script>
+  </body>
+</html>
+
+
+

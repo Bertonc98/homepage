@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Alberto Bertoncini | Bio">
+    <title>Alberto Bertoncini</title>
+    <link rel="icon" href="/img/bassotto.ico" type="image/x-icon">
+    <!-- PNG fallback -->
+    <link rel="icon" href="/img/bassotto.png" type="image/png">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.blue.min.css">
+</head>
+<body>
+    <div id="navbar-content"></div>
+
+    <!-- Main Section -->
+    <main class="container" id="about">
+        <article class="profile-card">
+  <header style="display:flex;align-items:center;gap:1.5rem;flex-wrap:wrap;margin-bottom:1rem;">
+    <img src="/img/profile_picture.jpg" alt="Alberto Bertoncini" style="width:80px;height:80px;object-fit:cover;border-radius:var(--radius);">
+    <div>
+      <h1>Alberto Bertoncini</h1>
+      <p><strong>PhD Candidate</strong> · University of Milan (XLI) · OptLab/CONNETS</p>
+    </div>
+  </header>
+  <p>Mathematical optimization specialist focusing on microservice orchestration and resource allocation in cloud-to-edge environments for autonomous systems. Integrating cutting-edge optimization techniques with machine learning for next-generation distributed computing.</p>
+</article>
+
+<article>
+  <h2>Research Focus</h2>
+  <p>Leading research on <strong>service orchestration in dynamic multi-layer heterogeneous mobile networks</strong> and the <strong>PRIN CAVIA project</strong> (Cloud-to-Autonomous-Vehicles continuum).</p>
+  <ul>
+    <li>Designed simulation environments for edge-cloud microservice evaluation</li>
+    <li>Modeled complex placement problems across cloud-to-edge continuum</li>
+    <li>Developed mathematical programming and heuristic solutions for combinatorial optimization</li>
+  </ul>
+  <p>Collaborating with <strong>OptLab</strong> and <strong>CONNETS</strong> laboratories, Dept. of Computer Science, University of Milan.</p>
+</article>
+
+<article>
+  <h2>Industry Experience</h2>
+  <p><strong>Data Scientist</strong> at <strong>Latitudo Srl</strong> (Apr 2023–Jun 2024)</p>
+  <table>
+    <thead>
+      <tr><th>Project</th><th>Technologies</th><th>Impact</th></tr>
+    </thead>
+    <tbody>
+      <tr><td><strong>BigVite</strong></td><td>ML models</td><td>Smart agriculture analytics</td></tr>
+      <tr><td><strong>Analitica</strong></td><td>ETL, Cloud</td><td>Industrial data pipelines</td></tr>
+      <tr><td>Learning Analytics</td><td>Data processing</td><td>Online education analytics</td></tr>
+    </tbody>
+  </table>
+</article>
+
+<article>
+  <h2>Education</h2>
+  <ul>
+    <li><strong>M.Sc. Computer Science</strong> — University of Milan, <strong>110/110 cum laude</strong> (Apr 2023)<br><em>Enhancing sparse regression models with cutting planes</em></li>
+    <li><strong>B.Sc. Computer Science</strong> — University of Milan, <strong>106/110</strong> (Dec 2020)<br><em>VRP optimization for interlibrary logistics</em></li>
+    <li><strong>High School Diploma</strong> — IIS A. Cesaris, <strong>100/100</strong> (Jul 2017)</li>
+  </ul>
+</article>
+
+<article>
+  <h2>Academic Service</h2>
+  <p><strong>Lecturer</strong> — <em>Informatica e Biostatistica</em> (Veterinary Medicine, A.Y. 2024/25)</p>
+  <p><strong>Exam Committee Chair</strong> — <em>Scienze propedeutiche alla medicina veterinaria</em></p>
+</article>
+
+<article>
+  <h2>Conferences 2025</h2>
+  <ul>
+    <li><strong>IEEE SmartComp</strong> (Cork, Ireland): <em>Latency-Aware Placement of Microservices</em></li>
+    <li><strong>ISC DSA</strong> (Catania, Italy): <em>Centrality-Based Microservice Orchestration</em></li>
+  </ul>
+</article>
+
+
+    </main>
+
+    <footer class="container">
+        <small>© 2025 Alberto Bertoncini</small>
+    </footer>
+
+    <!-- JavaScript to load Navbar -->
+    <script>
+		function markActivePage() {
+				  const path = window.location.pathname;
+				  const currentPage = path.substring(path.lastIndexOf('/') + 1);
+				  console.log('PAGE:', currentPage);
+				  const links = document.querySelectorAll('#navbar a');
+
+				  links.forEach(link => {
+					const idPage = link.getAttribute('id');
+					console.log('ID:', idPage);
+					
+					if (currentPage.includes(idPage.replace('.html', ''))) {  // Strip .html for match
+					  link.classList.remove('secondary');
+					  link.classList.add('primary');
+					} else {
+					  link.classList.remove('primary');
+					  link.classList.add('secondary');
+					}
+				  });
+			  }
+		// Load navbar
+		fetch('/includes/navbar.html')
+		  .then(response => response.text())
+		  .then(html => {
+			document.getElementById('navbar-content').innerHTML = html;
+			markActivePage();  // Run after insert
+		  })
+		  .catch(err => console.error('Navbar load failed:', err));
+
+
+        
+
+    </script>
+  </body>
+</html>
+
+
+
