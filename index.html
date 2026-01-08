@@ -8,37 +8,22 @@
     <link rel="icon" href="img/bassotto.ico" type="image/x-icon">
     <!-- PNG fallback -->
     <link rel="icon" href="img/bassotto.png" type="image/png">
-<!--    <link rel="stylesheet" href="css/style.css">-->
+    <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/pico-main/css/pico.min.css">
 </head>
 <body>
-<!-- Navigation Bar -->
-<nav class="container-fluid">
-    <ul>
-        <li><strong>Alberto Bertoncini</strong></li>
-    </ul>
-    <ul>
-        <li><a href="#about">About</a></li>
-        <li><a href="src/Bertoncini_Alberto_Curriculum_Dottorato__Eng_.pdf" target="_blank">CV</a></li>
-        <li><a href="mailto:alberto.bertoncini@unimi.it">Contact</a></li>
-    </ul>
-</nav>
+{% include navbar.html %}
 
     <!-- Main Section -->
     <main class="container" id="about">
         <article>
-            <header>
-                <h1>Alberto Bertoncini</h1>
-            </header>
-
-            <div style="display:flex; align-items:center; gap:1.5rem; flex-wrap:wrap;">
-                <img src="img/profile.jpg" alt="Profile Photo" style="width:120px; aspect-ratio: 1/0.95; border-radius:30%;">
-                <ul>
-                    <li>Email: <a href="mailto:alberto.bertoncini@unimi.it">alberto.bertoncini@unimi.it</a></li>
-                    <li>GitHub: <a href="https://github.com/Bertonc98" target="_blank">github.com/Bertoncini</a></li>
-                    <li><a href="src/Bertoncini_Alberto_Curriculum_Dottorato__Eng_.pdf" target="_blank">Curriculum Vitae</a></li>
-                </ul>
-            </div>
+           <header style="display:flex; align-items:center; gap:var(--spacing,1.5rem); flex-wrap:wrap;">
+			<img src="img/profile_picture.jpg" alt="Profile Photo" style="width:10%;height:10%;object-fit:cover;border-radius:var(--radius);">
+			<div>
+			  <h3>Alberto Bertoncini</h3>
+			  <p>PhD Student · Allocation and Deployemnt Combinatorial Problems · OptLab-ConnetsLab, University of Milan</p>
+			</div>
+		  </header>
 
             <p>
                 I am Computer Science <strong>PhD Candidate</strong> at University of Milano, in particular I work with the <strong>OptLab</strong> and <strong>Connects Lab</strong>,
@@ -46,9 +31,13 @@
                 I worked in the same field as <strong>fellow researcher</strong>. <br><br>
                 I also teach the <em>Informatica e Biostatistica</em> module (a.y. 2024/2025) in the Veterinary Medicine course,
                 guiding students through information technology and biostatistics concepts.<br><br>
-                I also had a strong background as <strong>Data Scientist</strong> from my master degree and 2 years of work in enterprise environment. <br><br>
-                All information on my personal <a href="https://albertobertoncini.netlify.app/">website</a>.
+                I also had a strong background as <strong>Data Scientist</strong> from my master degree and 2 years of work in enterprise environment.
             </p>
+			<ul>
+                <li>Email: <a href="mailto:alberto.bertoncini@unimi.it">alberto.bertoncini@unimi.it</a></li>
+                <li>GitHub: <a href="https://github.com/Bertonc98" target="_blank">github.com/Bertoncini</a></li>
+                <li><a href="src/Bertoncini_Alberto_Curriculum_Dottorato__Eng_.pdf" target="_blank">Curriculum Vitae</a></li>
+            </ul>
         </article>
     </main>
 
