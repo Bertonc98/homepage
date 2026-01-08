@@ -1,0 +1,123 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f4f8;
+    color: #333;
+}
+
+/* Navbar Styling */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    alignn-items: center; /* This ensures vertical alignment */
+    background-color: #003366;
+    padding: 1rem;
+}
+
+.navbar ul {
+    list-style-type: none;
+    display: flex;
+    align-items: center; /* Vertically align list items */
+}
+
+.navbar ul li {
+    margin-right: 1rem;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+    padding: 0.2rem 0; /* Add padding for better spacing */
+}
+
+.navbar a.active {
+    border-bottom: 1px solid #dddddd;
+}
+
+.logo {
+    height: 75px;
+}
+
+/* Homepage Section */
+.home-section {
+    padding: 2rem;
+    text-align: center;
+}
+
+.home-section h1 {
+    color: #003366;
+    font-size: 3rem;
+    margin-bottom: 2rem;
+}
+
+.profile {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.profile img {
+    width: 150px;
+    margin-right: 2rem;
+}
+
+.profile p {
+    font-size: 1.2rem;
+    line-height: 1.5;
+    color: #555;
+}
+
+/* Description Box Styling */
+.description-box {
+    max-width: 50%;
+    margin: 2rem auto 0;
+    background-color: #f9f9f9;
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    line-height: 1.6;
+    font-size: 1.1rem;
+    word-wrap: break-word;
+}
+
+/* Animation */
+.navbar a:hover {
+    color: #cc9955;
+    transition: color 0.3s ease-in-out;
+}
+
+.profile img {
+    transition: transform 0.3s ease-in-out;
+}
+
+.profile img:hover {
+    transform: scale(1.1);
+}
+
+/* Contact Info Styling */
+.contact-info {
+    list-style-type: none;
+    padding: 0;
+    margin-bottom: 2rem;
+}
+
+.contact-info li {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+.contact-info a {
+    color: #003366;
+    text-decoration: none;
+}
+
+.contact-info a:hover {
+    text-decoration: underline;
+}

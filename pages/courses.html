@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Courses by Alberto Bertoncini, Researcher at UNIMI">
+    <title>Courses - Alberto Bertoncini</title>
+    <link rel="icon" type="image/x-icon" href="/bertoncini/img/bassotto.ico">
+    <!-- PNG fallback -->
+    <link rel="icon" href="img/bassotto.png" type="image/png">
+    <link rel="stylesheet" href="/bertoncini/css/style.css">
+</head>
+<body>
+    <!-- Navbar Section (Loaded from external file) -->
+    <div id="navbar"></div>
+
+    <!-- Main Content Section -->
+    <section class="home-section">
+        <div class="container">
+            <h1>Courses</h1>
+	    
+            <p>Informatica e Biostatistica</p>
+        </div>
+    </section>
+
+    <!-- JavaScript to load Navbar -->
+    <script>
+        fetch('navbar.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('navbar').innerHTML = data;
+                markActivePage();
+            });
+
+        function markActivePage() {
+          const path = window.location.pathname;
+          const currentPage = path.substring(path.lastIndexOf('/') + 1);
+          const links = document.querySelectorAll('.navbar a');
+
+          links.forEach(link => {
+              const linkPage = link.getAttribute('href');
+              console.log(linkPage)
+              if ((currentPage === "" || currentPage === "index.html") && linkPage.includes("index.html")) {
+                  // If root path is accessed directly (like /bertoncini/), mark 'index.html' as active
+                  link.classList.add('active');
+              } else if (currentPage != "" && linkPage.includes(currentPage)) {
+                  link.classList.add('active');
+              } else {
+                  link.classList.remove('active');
+              }
+          });
+      }
+    </script>
+</body>
+</html>
+
