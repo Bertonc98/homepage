@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,10 +9,10 @@
     <!-- PNG fallback -->
     <link rel="icon" href="img/bassotto.png" type="image/png">
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/pico-main/css/pico.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.blue.min.css">
 </head>
 <body>
-{% include navbar.html %}
+    {% include navbar.html %}
 
     <!-- Main Section -->
     <main class="container" id="about">
@@ -27,7 +27,7 @@
 
             <p>
                 I am Computer Science <strong>PhD Candidate</strong> at University of Milano, in particular I work with the <strong>OptLab</strong> and <strong>Connects Lab</strong>,
-                where I focus on advancing research in network service optimized deployment via Mathematical Optimization and Machine Learning techniques.<br>
+                where I focus on advancing research in network service optimized deployment via Mathematical Optimization and Machine Learning techniques.
                 I worked in the same field as <strong>fellow researcher</strong>. <br><br>
                 I also teach the <em>Informatica e Biostatistica</em> module (a.y. 2024/2025) in the Veterinary Medicine course,
                 guiding students through information technology and biostatistics concepts.<br><br>
@@ -52,19 +52,17 @@
         function markActivePage() {
           const path = window.location.pathname;
           const currentPage = path.substring(path.lastIndexOf('/') + 1);
-          const links = document.querySelectorAll('.navbar a');
+		  console.log(currentPage);
+          const links = document.querySelectorAll('#navbar a');
 
           links.forEach(link => {
-              const linkPage = link.getAttribute('href');
-              console.log(linkPage)
-              if ((currentPage === "" || currentPage === "index.html") && linkPage.includes("index.html")) {
+              const idPage = link.getAttribute('id');
+              console.log(idPage);
+              if (currentPage.includes(idPage)) {
                   // If root path is accessed directly (like /bertoncini/), mark 'index.html' as active
-                  link.classList.add('active');
-              } else if (currentPage != "" && linkPage.includes(currentPage)) {
-                  link.classList.add('active');
-              } else {
-                  link.classList.remove('active');
-              }
+				  link.classList.remove('secondary');
+                  link.classList.add('primary');
+              } 
           });
       }
 	// Run after DOM loads

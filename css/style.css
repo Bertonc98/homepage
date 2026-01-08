@@ -4,3 +4,8 @@
   gap: 1.5rem;
   flex-wrap: wrap;
 }
+
+nav{
+	margin-left:2.5%;
+	margin-right:2.5%;
+}
