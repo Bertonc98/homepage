@@ -9,3 +9,14 @@ nav{
 	margin-left:40px;
 	margin-right:40px;
 }
+
+#goals-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.2rem;
+  margin-top: 1.5rem;
+}
+
+article footer {
+  text-align: right;
+}
