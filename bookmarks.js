@@ -9,6 +9,7 @@ const bookmarks = [
       { name: "Calendar", url: "https://calendar.google.com/calendar/u/0/r/week?tab=rc" },
       { name: "Tasks", url: "https://tasks.google.com/tasks/"},
       { name: "Meet", url: "https://meet.google.com/" },
+      { name: "Notion", url: "https://www.notion.so/" }
       { name: "Google Photos", url: "https://photos.google.com/" },
       { name: "Synchthing", url: "http://127.0.0.1:8384/"},
       { name: "Keep", url: "https://keep.google.com/"},
@@ -21,7 +22,6 @@ const bookmarks = [
       { name: "Amazon Prime", url: "https://www.primevideo.com/", },
       { name: "Animeunity", url: "https://www.animeunity.to/", },
       { name: "Spotify", url: "https://open.spotify.com/", },
-      { name: "Netflix", url: "https://www.netflix.com/browse", },
     ],
   },
   {
