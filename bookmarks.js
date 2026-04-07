@@ -4,16 +4,23 @@ const bookmarks = [
     title: "Daily",
     links: [
       { name: "Gmail", url: "https://inbox.google.com" },
-      { name: "GitHub", url: "https://github.com" },
       { name: "Drive", url: "https://drive.google.com" },
       { name: "Calendar", url: "https://calendar.google.com/calendar/u/0/r/week?tab=rc" },
       { name: "Tasks", url: "https://tasks.google.com/tasks/"},
       { name: "Meet", url: "https://meet.google.com/" },
       { name: "Notion", url: "https://www.notion.so/" },
       { name: "Google Photos", url: "https://photos.google.com/" },
-      { name: "Synchthing", url: "http://127.0.0.1:8384/"},
       { name: "Keep", url: "https://keep.google.com/"},
     ],
+  },
+  {
+    title: "Developer",
+    links:[
+      { name: "GitHub", url: "https://github.com" },
+      { name: "GitLab (Unimi)", url: "https://gitlab.di.unimi.it/" },
+      { name: "Paperopolis", url: "http://172.20.27.5/jupyter/user/albertobertoncini/lab"}
+      { name: "Synchthing", url: "http://127.0.0.1:8384/"},
+    ]
   },
   {
     title: "Media",
