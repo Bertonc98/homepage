@@ -17,6 +17,24 @@ nav{
   margin-top: 1.5rem;
 }
 
+progress {
+  width: 100%;
+  display: block;
+  box-sizing: border-box;
+}
+
+[aria-busy="true"] {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+[aria-busy="true"] progress {
+  flex: 1;
+  margin-bottom: 0;
+  width: auto;
+}
+
 article footer {
   text-align: right;
 }

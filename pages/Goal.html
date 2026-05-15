@@ -78,7 +78,7 @@
             <small>${goal.category}</small>
           </header>
 
-          <progress value="${percent}" max="100"></progress>
+          <span aria-busy="true"> <progress value="${percent}" max="100"></progress> </span>
 
           <footer>
             <small>${goal.progress} / ${goal.goal} (${percent.toFixed(0)}%)</small>
