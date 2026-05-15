@@ -18,7 +18,7 @@ const bookmarks = [
     links:[
       { name: "GitHub", url: "https://github.com" },
       { name: "GitLab (Unimi)", url: "https://gitlab.di.unimi.it/" },
-      { name: "Paperopolis", url: "http://172.20.27.5/jupyter/user/albertobertoncini/lab"},
+      { name: "Paperopolis", url: "http://shifu/jupyter/user/albertobertoncini/lab"},
       { name: "Synchthing", url: "http://127.0.0.1:8384/"},
     ],
   },
