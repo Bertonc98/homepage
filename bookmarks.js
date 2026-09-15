@@ -45,6 +45,8 @@ const bookmarks = [
     links: [
        { name: "Teams", url: "https://teams.microsoft.com/v2/" },
        { name: "Mail", url: "https://outlook.office.com/mail/" },
+       { name: "PhD Guidelines", url:"https://guidelines.phd.di.unimi.it/"},
+       { name: "PhD Manager", url:"https://manager.phd.di.unimi.it/"},
        { name: "Unimibox", url: "https://unimibox.unimi.it/index.php/apps/files"},
        { name: "OverLeaf", url: "https://www.overleaf.com/project"},
        { name: "EasyBadge", url: "https://orari-be.divsi.unimi.it/easybadge-new/attivita-giorno"},
