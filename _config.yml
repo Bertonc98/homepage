@@ -1,0 +1,40 @@
+title: Alberto Bertoncini
+position: PhD Candidate
+affiliation: University of Milan
+affiliation_link: https://www.unimi.it/
+email: alberto.bertoncini@unimi.it
+description: Personal academic website of Alberto Bertoncini.
+keywords: mathematical optimization, cloud-to-edge, microservice placement, combinatorial optimization
+url: "https://www.albertobertoncini.com"
+baseurl: ""
+
+avatar: /img/profile_square.jpg
+favicon: /img/bassotto.png
+favicon_ico: /img/bassotto.ico
+cv_link: /src/Bertoncini_Alberto_Curriculum_Dottorato__Eng_.pdf
+github_link: https://github.com/Bertonc98
+scholar_link: https://scholar.google.com/citations?user=EDXWV9YAAAAJ&hl=en
+enable_footnote: false
+
+affiliations:
+  - name: OptLab
+    url: https://optlab.di.unimi.it/
+  - name: CONNETS
+    url: https://connets.di.unimi.it/
+
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+exclude:
+  - AGENTS.md
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - vendor
+  # - homepage.html
+  # - bookmarks.js
+  # - styles.css
+  - includes
+  - css/pico-main
+  - pages/index2.html

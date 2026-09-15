@@ -1,0 +1,13 @@
+<h2>Conference Presentations</h2>
+<ul>
+  {% for item in site.data.conferences.presentations %}
+  <li><strong>{{ item.event }}</strong>{% if item.location %} ({{ item.location }}){% endif %}<br><em>{{ item.title }}</em></li>
+  {% endfor %}
+</ul>
+
+<h2>School and Courses</h2>
+<ul>
+  {% for item in site.data.conferences.schools %}
+  <li><strong>{{ item.name }}</strong> - {{ item.organizer }}<br>{{ item.description }}</li>
+  {% endfor %}
+</ul>

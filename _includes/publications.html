@@ -1,0 +1,19 @@
+{% assign groups = "publications,abstracts" | split: "," %}
+{% for group in groups %}
+{% assign entries = site.data.publications[group] %}
+{% if entries %}
+<h2>{% if group == "publications" %}International Conferences{% else %}Abstracts{% endif %}</h2>
+<ol class="bibliography">
+{% for item in entries %}
+<li>
+<p>
+{{ item.authors }}:
+"<strong>{{ item.title }}</strong>",
+{% if item.status %}{{ item.status }} of {% endif %}
+<em>{{ item.venue }}</em>{% if item.publisher %}, {{ item.publisher }}{% endif %}{% if item.location %}, {{ item.location }}{% endif %}{% if item.year %}, {{ item.year }}{% endif %}{% if item.pages %}, pp. {{ item.pages }}{% endif %}{% if item.doi %}, DOI: <a href="https://doi.org/{{ item.doi }}">{{ item.doi }}</a>{% endif %}.
+</p>
+</li>
+{% endfor %}
+</ol>
+{% endif %}
+{% endfor %}

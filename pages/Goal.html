@@ -1,0 +1,34 @@
+---
+layout: default
+title: Progress
+---
+
+<h1>Progress</h1>
+
+<div id="goals-container"></div>
+
+<script>
+fetch('/src/goals.json')
+  .then(response => response.json())
+  .then(data => {
+    const container = document.getElementById('goals-container');
+
+    data.forEach(goal => {
+      const percent = goal.goal > 0
+        ? Math.min((goal.progress / goal.goal) * 100, 100)
+        : 0;
+
+      const card = document.createElement('div');
+
+      card.innerHTML = `
+        <h3>${goal.title}</h3>
+        <p>${goal.category}</p>
+        <progress value="${goal.progress}" max="${goal.goal}"></progress>
+        <small>${goal.progress} / ${goal.goal} (${percent.toFixed(0)}%)</small>
+      `;
+
+      container.appendChild(card);
+    });
+  })
+  .catch(err => console.error('Goals load failed:', err));
+</script>

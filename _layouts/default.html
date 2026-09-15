@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="{{ site.lang | default: "en" }}">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="{{ page.description | default: site.description }}">
+    {% if site.keywords %}<meta name="keywords" content="{{ site.keywords }}">{% endif %}
+    <title>{% if page.title %}{{ page.title }} | {% endif %}{{ site.title }}</title>
+    <link rel="icon" href="{{ site.favicon_ico | relative_url }}" type="image/x-icon">
+    <link rel="icon" href="{{ site.favicon | relative_url }}" type="image/png">
+    <link rel="stylesheet" href="{{ "/assets/css/style.css" | relative_url }}">
+    {% seo title=false %}
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        {% if site.avatar %}
+        <a class="image avatar" href="{{ "/" | relative_url }}"><img src="{{ site.avatar | relative_url }}" alt="{{ site.title }}"></a>
+        {% endif %}
+        <h1>{{ site.title }}</h1>
+        {% if site.position %}<p class="position">{{ site.position }}</p>{% endif %}
+        {% if site.affiliation %}<p><a href="{{ site.affiliation_link }}" rel="noopener">{{ site.affiliation }}</a></p>{% endif %}
+        {% if site.email %}<p><a href="mailto:{{ site.email }}">{{ site.email }}</a></p>{% endif %}
+        <p class="profile-note">
+        {% for affiliation in site.affiliations %}
+          {% if forloop.first == false %} · {% endif %}
+          <a href="{{ affiliation.url }}">{{ affiliation.name }}</a>
+        {% endfor %}
+        </p>
+        <p>Combinatorial Optimization, Network Science, Service Orchestration</p>
+        {% include navigation.html %}
+        <p class="profile-links">
+          {% if site.github_link %}<a href="{{ site.github_link }}">GitHub</a>{% endif %}
+          {% if site.scholar_link %}<a href="{{ site.scholar_link }}">Scholar</a>{% endif %}
+        </p>
+      </header>
+      <main>
+        {{ content }}
+      </main>
+      <footer>
+        <small>&copy; 2025 {{ site.title }}</small>
+      </footer>
+    </div>
+  </body>
+</html>
