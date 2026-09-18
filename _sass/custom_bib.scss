@@ -1,0 +1,82 @@
+#bib-modal {
+width: min(800px, 90vw);
+max-height: 80vh;
+padding: 0;
+border: 1px solid #cccccc;
+border-radius: 6px;
+}
+
+#bib-modal::backdrop {
+background: rgba(0, 0, 0, 0.5);
+}
+
+.bib-modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.75rem 1rem;
+    border-bottom: 1px solid #cccccc;
+}
+
+#bib-close {
+border: 0;
+background: none;
+font-size: 1.5rem;
+cursor: pointer;
+}
+
+#bib-content {
+margin: 0;
+padding: 1rem;
+max-height: 60vh;
+overflow: auto;
+white-space: pre-wrap;
+word-break: break-word;
+}
+
+.bib-modal-footer {
+    padding: 0.75rem 1rem;
+    border-top: 1px solid #cccccc;
+    text-align: right;
+}
+
+.bib-view,
+#bib-copy {
+display: inline-block;
+margin-left: 0.4rem;
+padding: 0.25rem 0.6rem;
+border: 1px solid #ccc;
+border-radius: 4px;
+background: transparent;
+color: inherit;
+font: inherit;
+font-size: 0.85em;
+line-height: 1.2;
+cursor: pointer;
+}
+#bib-download {
+display: inline-block;
+margin-left: 0.4rem;
+padding: 0.25rem 0.6rem;
+border: 1px solid #ccc;
+border-radius: 4px;
+background: transparent;
+color: inherit;
+font: inherit;
+font-size: 0.85em;
+line-height: 1.2;
+cursor: pointer;
+}
+
+.bib-view:hover,
+#bib-copy:hover {
+background: #f2f2f2;
+border-color: #999;
+}
+
+.bib-view:focus-visible,
+#bib-copy:focus-visible,
+#bib-close:focus-visible {
+outline: 2px solid currentColor;
+outline-offset: 2px;
+}

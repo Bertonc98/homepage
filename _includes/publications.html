@@ -11,9 +11,99 @@
 "<strong>{{ item.title }}</strong>",
 {% if item.status %}{{ item.status }} of {% endif %}
 <em>{{ item.venue }}</em>{% if item.publisher %}, {{ item.publisher }}{% endif %}{% if item.location %}, {{ item.location }}{% endif %}{% if item.year %}, {{ item.year }}{% endif %}{% if item.pages %}, pp. {{ item.pages }}{% endif %}{% if item.doi %}, DOI: <a href="https://doi.org/{{ item.doi }}">{{ item.doi }}</a>{% endif %}.
+{% if item.bib %}
+<!-- <br> -->
+<button type="button"
+        class="bib-view"
+        data-bib="{{ '/assets/bib/' | append: item.bib | relative_url }}">
+  View BibTeX
+</button>
+{% endif %}
 </p>
 </li>
 {% endfor %}
 </ol>
 {% endif %}
 {% endfor %}
+
+<dialog id="bib-modal">
+  <div class="bib-modal-header">
+    <strong>BibTeX</strong>
+    <button type="button" id="bib-close" aria-label="Close">×</button>
+  </div>
+
+  <pre id="bib-content"></pre>
+
+  <div class="bib-modal-footer">
+  <button type="button" id="bib-copy">Copy</button>
+  <button type="button" id="bib-download">Download</button>
+</div>
+</dialog>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const modal = document.getElementById("bib-modal");
+  const content = document.getElementById("bib-content");
+  const close = document.getElementById("bib-close");
+  const copy = document.getElementById("bib-copy");
+
+  document.querySelectorAll(".bib-view").forEach((button) => {
+    button.addEventListener("click", async () => {
+      try {
+        const response = await fetch(button.dataset.bib);
+
+        if (!response.ok) {
+          throw new Error(`HTTP ${response.status}`);
+        }
+
+        content.textContent = await response.text();
+        modal.showModal();
+      } catch (error) {
+        console.error("Unable to load BibTeX:", error);
+      }
+    });
+  });
+
+  close.addEventListener("click", () => {
+    modal.close();
+  });
+
+  copy.addEventListener("click", async () => {
+    try {
+      await navigator.clipboard.writeText(content.textContent);
+
+      const originalText = copy.textContent;
+      copy.textContent = "Copied!";
+
+      setTimeout(() => {
+        copy.textContent = originalText;
+      }, 1500);
+    } catch (error) {
+      console.error("Unable to copy BibTeX:", error);
+    }
+  });
+
+  modal.addEventListener("click", (event) => {
+    if (event.target === modal) {
+      modal.close();
+    }
+  });
+
+  const download = document.getElementById("bib-download");
+
+    download.addEventListener("click", () => {
+    const blob = new Blob([content.textContent], {
+        type: "text/plain;charset=utf-8"
+    });
+
+    const url = URL.createObjectURL(blob);
+    const link = document.createElement("a");
+
+    link.href = url;
+    link.download = "citation.bib";
+    link.click();
+
+    URL.revokeObjectURL(url);
+    });
+});
+</script>

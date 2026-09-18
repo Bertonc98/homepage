@@ -6,6 +6,7 @@ publications:
     pages: "420-425"
     doi: "10.1109/SMARTCOMP65954.2025.00103"
     type: "International Conferences"
+    bib: "mplv2025.bib"
   - title: "A Centrality-Based Resource-Aware Microservice Orchestration in Cloud-to-Edge Continuum"
     authors: "Alberto Bertoncini, Alberto Ceselli, Christian Quadri"
     venue: "Decision Sciences"
@@ -14,18 +15,21 @@ publications:
     pages: "197-212"
     doi: "10.1007/978-3-032-21811-7_14"
     type: "International Conferences"
+    bib: "centrality2025.bib"
   - title: "GiMLI: GRASP-based algorithm for Microservice placement under end-to-end latency constraints"
     authors: "Alberto Bertoncini, Christian Quadri"
     venue: "IEEE Smart World Congress 2026"
     status: "accepted for publication in the proceedings"
     year: 2026
     type: "International Conferences"
+    bib: "gimli2026.bib"
   - title: "LEAFS: Linear Edge-to-cloud Latency-Aware Formulation for Service Placement"
     authors: "Alberto Bertoncini, Alberto Ceselli, Christian Quadri"
     venue: "4th Decision Science Alliance International Summer Conference (DSA ISC2026)"
     status: "accepted for publication in the proceedings"
     year: 2026
     type: "International Conferences"
+    bib: "leafs2026.bib"
 
 abstracts:
   - title: "Enhancing sparse regression models with cutting planes"
@@ -34,9 +38,11 @@ abstracts:
     location: "Ischia, Italia"
     year: 2023
     type: "Abstracts"
+    bib: "sparse2023.bib"
   - title: "A Branch and Price approach for latency aware VNF placement"
     authors: "Alberto Bertoncini, Alberto Ceselli"
     venue: "6th EUROYoung Workshop"
     location: "Lugano, Switzerland"
     year: 2026
     type: "Abstracts"
+    bib: "bnp2026.bib"
