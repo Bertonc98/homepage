@@ -19,9 +19,9 @@ publications:
   - title: "GiMLI: GRASP-based algorithm for Microservice placement under end-to-end latency constraints"
     authors: "Alberto Bertoncini, Christian Quadri"
     venue: "IEEE Smart World Congress 2026"
-    status: "accepted for publication in the proceedings"
     publisher: "IEEE"
     year: 2026
+    doi: "10.1109/SWC69865.2026.11763793"
     type: "International Conferences"
     bib: "gimli2026.bib"
   - title: "LEAFS: Linear Edge-to-cloud Latency-Aware Formulation for Service Placement"
